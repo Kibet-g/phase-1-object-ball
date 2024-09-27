@@ -136,3 +136,13 @@ function shoeSize(playerName) {
         }
     }
 }
+
+// Function to return the colors of a specific team
+function teamColors(teamName) {
+    const game = gameObject();
+    for (let team in game) {
+        if (game[team].teamName === teamName) {
+            return game[team].colors;
+        }
+    }
+}
