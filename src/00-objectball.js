@@ -115,3 +115,14 @@ function gameObject() {
     };
 }
 
+// Function to return the points scored by a specific player
+function numPointsScored(playerName) {
+    const game = gameObject();
+    for (let team in game) {
+        const players = game[team].players;
+        if (players[playerName]) {
+            return players[playerName].points;
+        }
+    }
+}
+
