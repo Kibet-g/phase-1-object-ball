@@ -162,3 +162,13 @@ function playerNumbers(teamName) {
         }
     }
 }
+// Function to return the stats for a specific player
+function playerStats(playerName) {
+    const game = gameObject();
+    for (let team in game) {
+        const players = game[team].players;
+        if (players[playerName]) {
+            return players[playerName];
+        }
+    }
+}
