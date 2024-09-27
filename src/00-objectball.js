@@ -225,3 +225,14 @@ function winningTeam() {
 
     return homePoints > awayPoints ? game.home.teamName : game.away.teamName;
 }
+
+// Testing the functions
+console.log(numPointsScored("Ben Gordon")); // 33
+console.log(shoeSize("Brendan Haywood")); // 15
+console.log(teamColors("Brooklyn Nets")); // ["Black", "White"]
+console.log(teamNames()); // ["Brooklyn Nets", "Charlotte Hornets"]
+console.log(playerNumbers("Charlotte Hornets")); // [4, 0, 2, 8, 33]
+console.log(playerStats("Alan Anderson")); // Player stats for Alan Anderson
+console.log(bigShoeRebounds()); // Rebounds of player with the largest shoe size
+console.log(mostPointsScored()); // Player who scored the most points
+console.log(winningTeam()); // Team with the most points
