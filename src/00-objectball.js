@@ -146,3 +146,9 @@ function teamColors(teamName) {
         }
     }
 }
+
+// Function to return an array of all team names
+function teamNames() {
+    const game = gameObject();
+    return [game.home.teamName, game.away.teamName];
+}
