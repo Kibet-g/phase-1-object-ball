@@ -172,3 +172,20 @@ function playerStats(playerName) {
         }
     }
 }
+// Function to return the number of rebounds of the player with the largest shoe size
+function bigShoeRebounds() {
+    const game = gameObject();
+    let largestShoe = 0;
+    let playerRebounds = 0;
+
+    for (let team in game) {
+        const players = game[team].players;
+        for (let player in players) {
+            if (players[player].shoe > largestShoe) {
+                largestShoe = players[player].shoe;
+                playerRebounds = players[player].rebounds;
+            }
+        }
+    }
+    return playerRebounds;
+}
