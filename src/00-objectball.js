@@ -152,3 +152,13 @@ function teamNames() {
     const game = gameObject();
     return [game.home.teamName, game.away.teamName];
 }
+// Function to return an array of player jersey numbers for a specific team
+function playerNumbers(teamName) {
+    const game = gameObject();
+    for (let team in game) {
+        if (game[team].teamName === teamName) {
+            const players = game[team].players;
+            return Object.values(players).map(player => player.number);
+        }
+    }
+}
