@@ -189,3 +189,39 @@ function bigShoeRebounds() {
     }
     return playerRebounds;
 }
+
+// Bonus Functions
+
+// Function to return the player who scored the most points
+function mostPointsScored() {
+    const game = gameObject();
+    let maxPoints = 0;
+    let topPlayer = '';
+
+    for (let team in game) {
+        const players = game[team].players;
+        for (let player in players) {
+            if (players[player].points > maxPoints) {
+                maxPoints = players[player].points;
+                topPlayer = player;
+            }
+        }
+    }
+    return topPlayer;
+}
+
+// Function to return the team that scored the most points
+function winningTeam() {
+    const game = gameObject();
+    let homePoints = 0;
+    let awayPoints = 0;
+
+    for (let player in game.home.players) {
+        homePoints += game.home.players[player].points;
+    }
+    for (let player in game.away.players) {
+        awayPoints += game.away.players[player].points;
+    }
+
+    return homePoints > awayPoints ? game.home.teamName : game.away.teamName;
+}
