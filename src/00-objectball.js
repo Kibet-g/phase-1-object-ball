@@ -126,3 +126,13 @@ function numPointsScored(playerName) {
     }
 }
 
+// Function to return the shoe size of a specific player
+function shoeSize(playerName) {
+    const game = gameObject();
+    for (let team in game) {
+        const players = game[team].players;
+        if (players[playerName]) {
+            return players[playerName].shoe;
+        }
+    }
+}
